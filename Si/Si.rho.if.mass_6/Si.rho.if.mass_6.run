@@ -1,0 +1,25 @@
+#!/bin/bash   
+#SBATCH -J Si.rho.if.mass_6
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -o /home/tatiana.kobernik//Si//Si.rho.if.mass_6/sbatch.out
+#SBATCH -e /home/tatiana.kobernik//Si//Si.rho.if.mass_6/sbatch.err
+cd /home/tatiana.kobernik//Si//Si.rho.if.mass_6/
+
+ulimit -s unlimited
+
+export PATH=$PATH:/home/tatiana.kobernik/tools/
+touch RUNNING
+#Basic run:
+cp 1.POSCAR POSCAR
+vasp_std >Si.rho.if.mass_6.1.log
+sleep 20
+mv OUTCAR 1.OUTCAR
+mv CONTCAR 1.CONTCAR
+mv EIGENVAL 1.EIGENVAL
+mv CHGCAR 1.CHGCAR
+mv vasprun.xml 1.vasprun.xml
+
+#Footer section: 
+rm CHG PARCHG AECCAR0 XDATCAR OSZICAR ELFCAR PROCAR LOCPOT WAVECAR DOSCAR WAVEDER AECCAR2 
+rm RUNNING

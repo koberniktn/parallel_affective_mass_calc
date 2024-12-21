@@ -1,0 +1,9 @@
+SYSTEM =  scale: scaled "images" for Si.rho.['sp'].1; no description for these set, see history
+EDIFF = 1e-05
+ENAUG = 700.0
+ENCUT = 600
+ISMEAR = 0
+LREAL = .FALSE.
+NBANDS = 12
+NSW = 0
+

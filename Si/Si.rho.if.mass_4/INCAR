@@ -1,0 +1,10 @@
+SYSTEM =  auto Fully inherited from the final state of Si.rho.sp.1; no description for these set, see history
+EDIFF = 1e-05
+ENAUG = 700.0
+ENCUT = 600
+ISMEAR = 0
+LORBIT = 11
+LREAL = .FALSE.
+NBANDS = 12
+NSW = 0
+
